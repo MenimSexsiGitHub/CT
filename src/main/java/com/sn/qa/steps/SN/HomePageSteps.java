@@ -43,36 +43,14 @@ public class HomePageSteps extends BaseSteps {
         homePage.verifyPageTitleText();
     }
 
-    @When("^user verifies that the background image for home page is displayed$")
-    public void verifyHomePageBackgroundImage() throws Throwable {
-        homePage.verifyBackgroundImageExistence();
-    }
 
     @When("^user verifies that the expected texts of the page are displayed$")
     public void verifyHomePageTextsDisplayed() throws Throwable {
-        homePage.verifyDonateTodayText();
+        homePage.verifyCiCdPageHeader();
         homePage.verifyDescriptionContent();
     }
 
-    @When("^user verifies that the One Time values are displayed correctly$")
-    public void verifyOneTimeValuesDisplayed() throws Throwable {
-        homePage.verifyOneTimeValuesDisplayedCorrectly();
-    }
 
-    @When("^user clicks Monthly button for frequency$")
-    public void userClicksMonthlyBtn() throws Throwable {
-        homePage.clickMonthlyContainerBtn();
-    }
-
-    @Then("^user verifies that the Monthly values are displayed correctly$")
-    public void verifyMonthlyValuesDisplayed() throws Throwable {
-        homePage.verifyMonthlyValuesDisplayedCorrectly();
-    }
-
-    @Then("^user clciks close button to close Manage Cookies footer popup$")
-    public void clickCLoseManageCookies() throws Throwable {
-        homePage.verifyMonthlyValuesDisplayedCorrectly();
-    }
 
 
 
