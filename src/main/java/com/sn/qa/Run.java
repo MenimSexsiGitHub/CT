@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @CucumberOptions(
         strict=true,
         glue = {"com.sn.qa.steps"},
-        features = {"src/main/resources/features/"},
+        features = {"src/main/resources/features/SN"},
         tags={"@HP_1"},
 //       plugin = {"pretty","json:target/cucumber.json","pretty:target/cucumber-pretty.txt","html:target/cucumber-html",
 //               "rerun:target/rerun.txt"}
