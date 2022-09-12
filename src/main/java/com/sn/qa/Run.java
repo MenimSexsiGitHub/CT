@@ -10,7 +10,7 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 // import cucumber.api.junit.Cucumber;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
-import jdk.nashorn.internal.runtime.regexp.joni.Regex;
+//import jdk.nashorn.internal.runtime.regexp.joni.Regex;
 // import org.junit.runner.RunWith;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -41,7 +41,7 @@ public class Run extends AbstractTestNGCucumberTests {
     private PropertyFileReader localReader = new PropertyFileReader("config.properties","config/");
     static ArrayList<String> listOfScenarios = new ArrayList<>();
     static ArrayList<String> results = new ArrayList<>();
-    private static final Regex myRegex = new Regex("[^\\\\p{Alpha}\\\\p{Digit}]+");
+//    private static final Regex myRegex = new Regex("[^\\\\p{Alpha}\\\\p{Digit}]+");
 
 
     @BeforeSuite
