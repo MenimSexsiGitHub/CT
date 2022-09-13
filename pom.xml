@@ -466,10 +466,10 @@
 <!--                                <id>generateRunners</id>-->
                                 <id>test</id>
                                 <phase>validate</phase>
-                                <goals>
-<!--                                    <goal>generateRunners</goal>-->
-                                    <goal>test</goal>
-                                </goals>
+<!--                                <goals>-->
+<!--&lt;!&ndash;                                    <goal>generateRunners</goal>&ndash;&gt;-->
+<!--                                    <goal>test</goal>-->
+<!--                                </goals>-->
                                 <configuration>
                                     <!-- Mandatory -->
                                     <glue>com.sn.qa</glue>
@@ -595,10 +595,10 @@
                                                 <versionRange>
                                                     [${parallel.plugin.version},)
                                                 </versionRange>
-                                                <goals>
-<!--                                                    <goal>generateRunners</goal>-->
-                                                    <goal>test</goal>
-                                                </goals>
+<!--                                                <goals>-->
+<!--&lt;!&ndash;                                                    <goal>generateRunners</goal>&ndash;&gt;-->
+<!--                                                    <goal>test</goal>-->
+<!--                                                </goals>-->
                                             </pluginExecutionFilter>
                                             <action>
                                                 <execute></execute>
@@ -683,10 +683,10 @@
                                                 <versionRange>
                                                     [${parallel.plugin.version},)
                                                 </versionRange>
-                                                <goals>
-<!--                                                    <goal>generateRunners</goal>-->
-                                                    <goal>test</goal>
-                                                </goals>
+<!--                                                <goals>-->
+<!--&lt;!&ndash;                                                    <goal>generateRunners</goal>&ndash;&gt;-->
+<!--                                                    <goal>test</goal>-->
+<!--                                                </goals>-->
                                             </pluginExecutionFilter>
                                             <action>
                                                 <execute></execute>
