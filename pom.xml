@@ -455,7 +455,7 @@
                                 </goals>
                                 <configuration>
                                     <files>
-                                        <file>${project.basedir}/src/main/resources/</file>
+                                        <file>${project.basedir}/src/main/resources/config/config.properties</file>
                                     </files>
                                 </configuration>
                             </execution>
