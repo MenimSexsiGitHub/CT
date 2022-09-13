@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>selenium-cucumber</groupId>
-    <artifactId>selenium-cucumber</artifactId>
+    <artifactId>CT</artifactId>
     <version>1.0.0</version>
 
 
@@ -64,24 +64,24 @@
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>1.2.5</version>
+            <version>1.2.6</version>
         </dependency>
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-jvm</artifactId>
-            <version>1.2.5</version>
+            <version>1.2.6</version>
             <type>pom</type>
         </dependency>
-        <dependency>
-            <groupId>info.cukes</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <version>1.2.5</version>
-            <scope>test</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>info.cukes</groupId>-->
+<!--            <artifactId>cucumber-junit</artifactId>-->
+<!--            <version>1.2.5</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-core</artifactId>
-            <version>1.2.5</version>
+            <version>1.2.6</version>
         </dependency>
         <dependency>
             <groupId>com.assertthat</groupId>
@@ -94,15 +94,9 @@
             <version>5.3.1</version>
         </dependency>
         <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <version>1.2.6</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-picocontainer</artifactId>
-            <version>1.2.5</version>
+            <version>1.2.6</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -164,7 +158,7 @@
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-testng</artifactId>
-            <version>1.2.5</version>
+            <version>1.2.6</version>
         </dependency>
         <dependency>
             <groupId>org.aspectj</groupId>
@@ -222,7 +216,7 @@
         <dependency>
             <groupId>net.masterthought</groupId>
             <artifactId>cucumber-reporting</artifactId>
-            <version>5.7.2</version>
+            <version>5.5.0</version>
         </dependency>
         <dependency>
             <groupId>io.appium</groupId>
@@ -394,12 +388,6 @@
             <version>2.22.0</version>
         </dependency>
         <dependency>
-            <groupId>info.cukes</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <version>1.2.6</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
             <groupId>org.docx4j</groupId>
             <artifactId>docx4j</artifactId>
             <version>3.2.2</version>
@@ -415,7 +403,13 @@
             <version>6.0.0</version>
             <scope>compile</scope>
         </dependency>
-<!--        <dependency>-->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>1.2.6</version>
+            <scope>compile</scope>
+        </dependency>
+        <!--        <dependency>-->
 <!--            <groupId>org.apache.maven.plugins</groupId>-->
 <!--            <artifactId>maven-failsafe-plugin</artifactId>-->
 <!--            <version>2.18.1</version>-->
@@ -457,6 +451,37 @@
                                     <files>
                                         <file>${project.basedir}/src/main/resources/config/config.properties</file>
                                     </files>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>JUnitTests</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>${maven.surefire.version}</version>
+                        <executions>
+                            <execution>
+                                <id>CT</id>
+                                <phase>test</phase>
+                                <goals>
+                                    <goal>test</goal>
+                                </goals>
+                                <configuration>
+                                    <testSourceDirectory>${basedir}/src/main/test/com/sn/test</testSourceDirectory>
+                                    <testSourceDirectory>${project.build.directory}/classes/</testSourceDirectory>
+                                    <argLine>-Xmx256</argLine>
+<!--                                    <forkCount>${forkCount}</forkCount>-->
+                                    <reuseForks>false</reuseForks>
+                                    <includes>
+                                        <include>**/*Test.java</include>
+                                    </includes>
                                 </configuration>
                             </execution>
                         </executions>

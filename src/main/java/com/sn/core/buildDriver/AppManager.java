@@ -57,8 +57,6 @@ public class AppManager {
                 wd = new EdgeDriver(edgeOptions);
             } else if (browser.equalsIgnoreCase("CHROME")) {
                 System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-//                File file = new File(CucumberFormatter.outputDirectory + File.separator + "TestDocuments");
-//                file.mkdir();
                 Map<String, Object> chromePrefs = new HashMap<String, Object>();
                 chromePrefs.put("profile.default_content_settings.popups", 0);
                 chromePrefs.put("profile.default_content_setting_values.notifications", 2);
