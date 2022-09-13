@@ -594,7 +594,8 @@
                                                     [${parallel.plugin.version},)
                                                 </versionRange>
                                                 <goals>
-                                                    <goal>generateRunners</goal>
+<!--                                                    <goal>generateRunners</goal>-->
+                                                    <goal>test</goal>
                                                 </goals>
                                             </pluginExecutionFilter>
                                             <action>
