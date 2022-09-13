@@ -26,7 +26,7 @@ public  class PropertyFileReader {
     public PropertyFileReader(String file, String location) {
         try {
             this.reader = new Properties();
-            this.fis = new FileInputStream(System.getProperty("user.dir")+"/src/main/resources/" + location +file);
+            this.fis = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/" + location +file);
             reader.load(fis);
         } catch (FileNotFoundException e) {
             e.printStackTrace();

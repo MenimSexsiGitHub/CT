@@ -24,7 +24,7 @@ import java.util.ArrayList;
 @CucumberOptions(
         strict=true,
         glue = {"com.sn.qa.steps"},
-        features = {"src/main/resources/features/"},
+        features = {"src/test/resources/features/"},
         tags={"@HP_1"},
        plugin = {"pretty","json:target/cucumber.json","pretty:target/cucumber-pretty.txt","html:target/cucumber-html",
                "rerun:target/rerun.txt"}
@@ -34,7 +34,7 @@ import java.util.ArrayList;
 
 
 public class Run extends AbstractTestNGCucumberTests {
-    String sourceDir = "./src/main/resources/";
+    String sourceDir = "./src/test/resources/";
 
 //    public class Run{
 //    }
