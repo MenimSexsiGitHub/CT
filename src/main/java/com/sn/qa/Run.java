@@ -22,12 +22,12 @@ import java.util.ArrayList;
 @CucumberOptions(
         strict=true,
         glue = {"com.sn.qa.steps"},
-        features = {"src/main/resources/features/SN"},
+        features = {"src/main/resources/features/"},
         tags={"@HP_1"},
-//       plugin = {"pretty","json:target/cucumber.json","pretty:target/cucumber-pretty.txt","html:target/cucumber-html",
-//               "rerun:target/rerun.txt"}
+       plugin = {"pretty","json:target/cucumber.json","pretty:target/cucumber-pretty.txt","html:target/cucumber-html",
+               "rerun:target/rerun.txt"}
 
-         plugin = {"io.qameta.allure.cucumberjvm.AllureCucumberJvm","com.sn.qa.util.CucumberFormatter"}
+//         plugin = {"io.qameta.allure.cucumberjvm.AllureCucumberJvm","com.sn.qa.util.CucumberFormatter"}
 )
 
 
