@@ -463,10 +463,12 @@
 <!--&lt;!&ndash;                        <version>4.2.0</version>&ndash;&gt;-->
 <!--                        <executions>-->
                             <execution>
-                                <id>generateRunners</id>
+<!--                                <id>generateRunners</id>-->
+                                <id>test</id>
                                 <phase>validate</phase>
                                 <goals>
-                                    <goal>generateRunners</goal>
+<!--                                    <goal>generateRunners</goal>-->
+                                    <goal>test</goal>
                                 </goals>
                                 <configuration>
                                     <!-- Mandatory -->
@@ -682,7 +684,8 @@
                                                     [${parallel.plugin.version},)
                                                 </versionRange>
                                                 <goals>
-                                                    <goal>generateRunners</goal>
+<!--                                                    <goal>generateRunners</goal>-->
+                                                    <goal>test</goal>
                                                 </goals>
                                             </pluginExecutionFilter>
                                             <action>
