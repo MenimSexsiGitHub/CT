@@ -416,13 +416,13 @@
 <!--        </dependency>-->
     </dependencies>
 
-<!--    <repositories>-->
-<!--        <repository>-->
-<!--            <id>datapipeline</id>-->
-<!--            <url>https://maven.northconcepts.com/public/repositories/datapipeline</url>-->
-<!--            <releases/>-->
-<!--        </repository>-->
-<!--    </repositories>-->
+    <repositories>
+        <repository>
+            <id>datapipeline</id>
+            <url>https://maven.northconcepts.com/public/repositories/datapipeline</url>
+            <releases/>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
