@@ -416,13 +416,13 @@
 <!--        </dependency>-->
     </dependencies>
 
-    <repositories>
-        <repository>
-            <id>datapipeline</id>
-            <url>https://maven.northconcepts.com/public/repositories/datapipeline</url>
-            <releases/>
-        </repository>
-    </repositories>
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>datapipeline</id>-->
+<!--            <url>https://maven.northconcepts.com/public/repositories/datapipeline</url>-->
+<!--            <releases/>-->
+<!--        </repository>-->
+<!--    </repositories>-->
 
     <build>
         <plugins>
@@ -467,6 +467,16 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M3</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
             </plugin>
         </plugins>
     </build>
