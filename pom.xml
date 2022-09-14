@@ -566,7 +566,7 @@
                                 <goal>test</goal>
                             </goals>
                             <configuration>
-                                <testSourceDirectory>${basedir}/src/main/test/com/asurion/test</testSourceDirectory>
+                                <testSourceDirectory>${basedir}/src/main/resources</testSourceDirectory>
                                 <testClassesDirectory>${project.build.directory}/classes/</testClassesDirectory>
                                 <argLine>-Xmx256m</argLine>
 <!--                                <forkCount>${forkCount}</forkCount>-->
