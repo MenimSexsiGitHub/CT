@@ -56,7 +56,7 @@ public class AppManager {
                 EdgeOptions edgeOptions = new EdgeOptions();
                 wd = new EdgeDriver(edgeOptions);
             } else if (browser.equalsIgnoreCase("CHROME")) {
-                System.setProperty("webdriver.chrome.drive", "./chromedriver");
+                System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
 //                Map<String, Object> chromePrefs = new HashMap<String, Object>();
 //                chromePrefs.put("profile.default_content_settings.popups", 0);
 //                chromePrefs.put("profile.default_content_setting_values.notifications", 2);
