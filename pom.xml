@@ -513,13 +513,6 @@
                     <includes>
                         <include>**/*Test.java</include>
                     </includes>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M3</version>
-                <configuration>
                     <properties>
                         <configurationParameters>
                             cucumber.junit-platform.naming-strategy=long
@@ -527,19 +520,31 @@
                     </properties>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.gmavenplus</groupId>
-                <artifactId>gmavenplus-plugin</artifactId>
-                <version>1.5</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>compile</goal>
-                            <goal>testCompile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-surefire-plugin</artifactId>-->
+<!--                <version>3.0.0-M3</version>-->
+<!--                <configuration>-->
+<!--                    <properties>-->
+<!--                        <configurationParameters>-->
+<!--                            cucumber.junit-platform.naming-strategy=long-->
+<!--                        </configurationParameters>-->
+<!--                    </properties>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.codehaus.gmavenplus</groupId>-->
+<!--                <artifactId>gmavenplus-plugin</artifactId>-->
+<!--                <version>1.5</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            <goal>compile</goal>-->
+<!--                            <goal>testCompile</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 
