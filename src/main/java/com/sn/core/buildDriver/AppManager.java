@@ -56,25 +56,26 @@ public class AppManager {
                 EdgeOptions edgeOptions = new EdgeOptions();
                 wd = new EdgeDriver(edgeOptions);
             } else if (browser.equalsIgnoreCase("CHROME")) {
-                System.setProperty("webdriver.Chrome", "./chromedriver");
-                Map<String, Object> chromePrefs = new HashMap<String, Object>();
-                chromePrefs.put("profile.default_content_settings.popups", 0);
-                chromePrefs.put("profile.default_content_setting_values.notifications", 2);
-//                chromePrefs.put("download.default_directory", file);
-                chromePrefs.put("profile.default_content_setting_values.automatic_downloads", 1);
-                chromePrefs.put("download.prompt_for_download", false);
-                chromePrefs.put("--ignore-ssl-errors",true);
-                chromePrefs.put("--ignore-certificate-errors",true);
-                chromePrefs.put("--allow-insecure-localhost",true);
-
-                ChromeOptions options = new ChromeOptions();
-                options.setExperimentalOption("prefs", chromePrefs);
-                DesiredCapabilities cap = DesiredCapabilities.chrome();
-                cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-                       cap.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS,true);
-                cap.setCapability(ChromeOptions.CAPABILITY, options);
-                wd = new ChromeDriver(options);
-                wd.manage().deleteAllCookies();
+                System.setProperty("webdriver.chrome.drive", "./chromedriver");
+//                Map<String, Object> chromePrefs = new HashMap<String, Object>();
+//                chromePrefs.put("profile.default_content_settings.popups", 0);
+//                chromePrefs.put("profile.default_content_setting_values.notifications", 2);
+////                chromePrefs.put("download.default_directory", file);
+//                chromePrefs.put("profile.default_content_setting_values.automatic_downloads", 1);
+//                chromePrefs.put("download.prompt_for_download", false);
+//                chromePrefs.put("--ignore-ssl-errors",true);
+//                chromePrefs.put("--ignore-certificate-errors",true);
+//                chromePrefs.put("--allow-insecure-localhost",true);
+//
+//                ChromeOptions options = new ChromeOptions();
+//                options.setExperimentalOption("prefs", chromePrefs);
+//                DesiredCapabilities cap = DesiredCapabilities.chrome();
+//                cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+//                       cap.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS,true);
+//                cap.setCapability(ChromeOptions.CAPABILITY, options);
+//                wd = new ChromeDriver(options);
+                wd = new ChromeDriver();
+//                wd.manage().deleteAllCookies();
             } else if (browser.equalsIgnoreCase("FIREFOX")) {
                 System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
