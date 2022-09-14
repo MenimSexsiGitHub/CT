@@ -42,7 +42,7 @@ public class AppManager {
         if (wd == null) {
             if ("".equals(reader.get("selenium.server"))) {
             if (browser.equalsIgnoreCase("IE")) {
-                System.setProperty("webdriver.ie.driver","./drivers/IEDriverServer.exe");
+                System.setProperty("webdriver.ie.driver","./IEDriverServer.exe");
                 DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
                 caps.setCapability("ignoreProtectedModeSettings", true);
                 caps.setCapability("ie.ensureCleanSession", true);
@@ -52,11 +52,11 @@ public class AppManager {
                 wd = new InternetExplorerDriver(caps);
                 wd.manage().deleteAllCookies();
             } else if (browser.equalsIgnoreCase("EDGE")) {
-                System.setProperty("webdriver.edge.driver","./drivers/msedgedriver.exe");
+                System.setProperty("webdriver.edge.driver","./msedgedriver.exe");
                 EdgeOptions edgeOptions = new EdgeOptions();
                 wd = new EdgeDriver(edgeOptions);
             } else if (browser.equalsIgnoreCase("CHROME")) {
-                System.setProperty("webdriver.chrome.driver", "./chromedriver");
+                System.setProperty("webdriver.Chrome", "./chromedriver");
                 Map<String, Object> chromePrefs = new HashMap<String, Object>();
                 chromePrefs.put("profile.default_content_settings.popups", 0);
                 chromePrefs.put("profile.default_content_setting_values.notifications", 2);
