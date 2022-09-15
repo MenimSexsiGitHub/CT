@@ -1,5 +1,6 @@
 package com.sn.qa.steps;
 
+import com.sn.core.buildDriver.AppManager;
 import com.sn.qa.util.CucumberFormatter;
 import cucumber.api.Scenario;
 import org.junit.After;
@@ -41,6 +42,7 @@ public class MainAutomationHooks {
     @After
     public void afterScenario(Scenario scenario) throws Throwable{
         failHereIfRequired();
+        AppManager.stop();
     }
 
 
