@@ -57,6 +57,7 @@ public class AppManager {
                 wd = new EdgeDriver(edgeOptions);
             } else if (browser.equalsIgnoreCase("CHROME")) {
                 System.setProperty("webdriver.Chrome", "./chromedriver");
+//                System.setProperty("webdriver.Chrome", "./chromedriver.exe");
 //                Map<String, Object> chromePrefs = new HashMap<String, Object>();
 //                chromePrefs.put("profile.default_content_settings.popups", 0);
 //                chromePrefs.put("profile.default_content_setting_values.notifications", 2);
@@ -66,16 +67,17 @@ public class AppManager {
 //                chromePrefs.put("--ignore-ssl-errors",true);
 //                chromePrefs.put("--ignore-certificate-errors",true);
 //                chromePrefs.put("--allow-insecure-localhost",true);
-//
                 ChromeOptions options = new ChromeOptions();
-                options.addArguments("--headless");
-                options.addArguments("--no-sandbox");
-                options.addArguments("--disable-dev-shm-usage");
 //                options.setExperimentalOption("prefs", chromePrefs);
 //                DesiredCapabilities cap = DesiredCapabilities.chrome();
 //                cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-//                       cap.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS,true);
+//                cap.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS,true);
 //                cap.setCapability(ChromeOptions.CAPABILITY, options);
+
+                options.addArguments("--disable-dev-shm-usage");
+                options.addArguments("--headless");
+                options.addArguments("--no-sandbox");
+
                 wd = new ChromeDriver(options);
                 wd.manage().deleteAllCookies();
             } else if (browser.equalsIgnoreCase("FIREFOX")) {
