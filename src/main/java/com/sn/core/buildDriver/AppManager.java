@@ -69,17 +69,16 @@ public class AppManager {
 //                chromePrefs.put("--ignore-certificate-errors",true);
 //                chromePrefs.put("--allow-insecure-localhost",true);
                 ChromeOptions options = new ChromeOptions();
+                options.setBinary("/usr/bin/google-chrome");
 //                options.setExperimentalOption("prefs", chromePrefs);
 //                DesiredCapabilities cap = DesiredCapabilities.chrome();
 //                cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 //                cap.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS,true);
 //                cap.setCapability(ChromeOptions.CAPABILITY, options);
 
+                options.addArguments("--headless");
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
-                options.addArguments("--headless");
-                options.addArguments("--disable-gpu");
-                options.addArguments("--disable-extensions");
 
                 wd = new ChromeDriver(options);
                 wd.manage().deleteAllCookies();
