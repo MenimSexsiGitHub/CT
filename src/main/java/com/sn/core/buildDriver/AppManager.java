@@ -70,6 +70,7 @@ public class AppManager {
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--headless");
                 options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
 //                options.setExperimentalOption("prefs", chromePrefs);
 //                DesiredCapabilities cap = DesiredCapabilities.chrome();
 //                cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
