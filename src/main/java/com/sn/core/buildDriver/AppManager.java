@@ -57,7 +57,7 @@ public class AppManager {
                 wd = new EdgeDriver(edgeOptions);
             } else if (browser.equalsIgnoreCase("CHROME")) {
 //                System.setProperty("webdriver.Chrome", "/snap/bin/chromium.chromedriver");
-                System.setProperty("webdriver.Chrome", "./chromedriver");
+                System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 //                System.setProperty("webdriver.Chrome", "./chromedriver.exe");
 //                Map<String, Object> chromePrefs = new HashMap<String, Object>();
 //                chromePrefs.put("profile.default_content_settings.popups", 0);
@@ -69,7 +69,7 @@ public class AppManager {
 //                chromePrefs.put("--ignore-certificate-errors",true);
 //                chromePrefs.put("--allow-insecure-localhost",true);
                 ChromeOptions options = new ChromeOptions();
-                options.setBinary("/usr/bin/google-chrome");
+//                options.setBinary("/usr/bin/google-chrome");
 //                options.setExperimentalOption("prefs", chromePrefs);
 //                DesiredCapabilities cap = DesiredCapabilities.chrome();
 //                cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
