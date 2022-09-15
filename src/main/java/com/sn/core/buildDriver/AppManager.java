@@ -69,7 +69,7 @@ public class AppManager {
 //                chromePrefs.put("--ignore-certificate-errors",true);
 //                chromePrefs.put("--allow-insecure-localhost",true);
                 ChromeOptions options = new ChromeOptions();
-                options.setBinary("/usr/bin/chrome/binary");
+                options.setBinary("/usr/bin/google-chrome");
 //                options.setExperimentalOption("prefs", chromePrefs);
 //                DesiredCapabilities cap = DesiredCapabilities.chrome();
 //                cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
