@@ -75,9 +75,11 @@ public class AppManager {
 //                cap.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS,true);
 //                cap.setCapability(ChromeOptions.CAPABILITY, options);
 
+                options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
                 options.addArguments("--headless");
-                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-gpu");
+                options.addArguments("--disable-extensions");
 
                 wd = new ChromeDriver(options);
                 wd.manage().deleteAllCookies();
