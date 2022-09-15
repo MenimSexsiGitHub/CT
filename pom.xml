@@ -499,34 +499,19 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M3</version>
-<!--                <configuration>-->
-<!--                    <suiteXmlFiles>-->
-<!--                        <suiteXmlFile>src/main/resources/testng.xml</suiteXmlFile>-->
-<!--                    </suiteXmlFiles>-->
-                <goals>
-                    <goal>test</goal>
-                </goals>
                 <configuration>
-                    <testSourceDirectory>/src/main/resources</testSourceDirectory>
-                    <testClassesDirectory>/src/main/java</testClassesDirectory>
-                    <argLine>-Xmx256m</argLine>
-                    <!--                                <forkCount>${forkCount}</forkCount>-->
-                    <reuseForks>false</reuseForks>
-                    <includes>
-                        <include>**/*Test.java</include>
-                    </includes>
-                    <properties>
-                        <configurationParameters>
-                            cucumber.junit-platform.naming-strategy=long
-                        </configurationParameters>
-                    </properties>
-                </configuration>
-            </plugin>
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-surefire-plugin</artifactId>-->
-<!--                <version>3.0.0-M3</version>-->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/main/resources/testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+<!--                <goals>-->
+<!--                    <goal>test</goal>-->
+<!--                </goals>-->
 <!--                <configuration>-->
+<!--                    <testSourceDirectory>/src/main/resources</testSourceDirectory>-->
+<!--                    <testClassesDirectory>/src/main/java</testClassesDirectory>-->
+<!--                    <argLine>-Xmx256m</argLine>-->
+<!--                    &lt;!&ndash;                                <forkCount>${forkCount}</forkCount>&ndash;&gt;-->
+<!--                    <reuseForks>false</reuseForks>-->
 <!--                    <includes>-->
 <!--                        <include>**/*Test.java</include>-->
 <!--                    </includes>-->
@@ -535,20 +520,8 @@
 <!--                            cucumber.junit-platform.naming-strategy=long-->
 <!--                        </configurationParameters>-->
 <!--                    </properties>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-surefire-plugin</artifactId>-->
-<!--                <version>3.0.0-M3</version>-->
-<!--                <configuration>-->
-<!--                    <properties>-->
-<!--                        <configurationParameters>-->
-<!--                            cucumber.junit-platform.naming-strategy=long-->
-<!--                        </configurationParameters>-->
-<!--                    </properties>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.codehaus.gmavenplus</groupId>
                 <artifactId>gmavenplus-plugin</artifactId>

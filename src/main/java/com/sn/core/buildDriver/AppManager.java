@@ -38,81 +38,81 @@ public class AppManager {
     }
 
 
-//    public static WebDriver getWebDriver() {
-//        if (wd == null) {
-//            if ("".equals(reader.get("selenium.server"))) {
-//            if (browser.equalsIgnoreCase("IE")) {
-//                System.setProperty("webdriver.ie.driver","./IEDriverServer.exe");
-//                DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
-//                caps.setCapability("ignoreProtectedModeSettings", true);
-//                caps.setCapability("ie.ensureCleanSession", true);
-//                caps.setCapability("enableElementCacheCleanup", true);
-//                caps.setCapability("ignoreZoomSetting", true);
-//                caps.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
-//                wd = new InternetExplorerDriver(caps);
-//                wd.manage().deleteAllCookies();
-//            } else if (browser.equalsIgnoreCase("EDGE")) {
-//                System.setProperty("webdriver.edge.driver","./msedgedriver.exe");
-//                EdgeOptions edgeOptions = new EdgeOptions();
-//                wd = new EdgeDriver(edgeOptions);
-//            } else if (browser.equalsIgnoreCase("CHROME")) {
-////                System.setProperty("webdriver.Chrome", "/snap/bin/chromium.chromedriver");
-//                System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-////                System.setProperty("webdriver.Chrome", "./chromedriver.exe");
-////                Map<String, Object> chromePrefs = new HashMap<String, Object>();
-////                chromePrefs.put("profile.default_content_settings.popups", 0);
-////                chromePrefs.put("profile.default_content_setting_values.notifications", 2);
-//////                chromePrefs.put("download.default_directory", file);
-////                chromePrefs.put("profile.default_content_setting_values.automatic_downloads", 1);
-////                chromePrefs.put("download.prompt_for_download", false);
-////                chromePrefs.put("--ignore-ssl-errors",true);
-////                chromePrefs.put("--ignore-certificate-errors",true);
-////                chromePrefs.put("--allow-insecure-localhost",true);
-//                ChromeOptions options = new ChromeOptions();
-////                options.setBinary("/usr/bin/google-chrome");
-////                options.setExperimentalOption("prefs", chromePrefs);
-////                DesiredCapabilities cap = DesiredCapabilities.chrome();
-////                cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-////                cap.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS,true);
-////                cap.setCapability(ChromeOptions.CAPABILITY, options);
-//
-//                options.addArguments("--headless");
-//                options.addArguments("--disable-dev-shm-usage");
-//                options.addArguments("--allow-insecure-localhost");
-//                options.addArguments("--window-size=1920,1080");
-//                options.addArguments("start-maximized");
-//                options.addArguments("enable-automation");
-//                options.addArguments("--disable-infobars");
-//                options.addArguments("--disable-browser-side-navigation");
-//                options.addArguments("--disable-gpu");
-//                options.addArguments("--no-sandbox");
-//                options.addArguments("--force-device-scale-factor=1");
-//
-//                wd = new ChromeDriver(options);
-//                wd.manage().deleteAllCookies();
-//            } else if (browser.equalsIgnoreCase("FIREFOX")) {
-//                System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
-//                FirefoxOptions firefoxOptions = new FirefoxOptions();
-//                wd = new FirefoxDriver(firefoxOptions);
-//            }
-//
-//        } else {
-//            DesiredCapabilities capabilities = new DesiredCapabilities();
-//            capabilities.setBrowserName(browser);
-//            try {
-//                wd = new RemoteWebDriver(new URL(reader.get("")), capabilities);
-//            } catch (MalformedURLException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//        wd.manage().window().maximize();
-//        wd.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-//
-//        return wd;
-//        }else{
-//            return wd;
-//        }
-//    }
+    public static WebDriver getWebDriver() {
+        if (wd == null) {
+            if ("".equals(reader.get("selenium.server"))) {
+            if (browser.equalsIgnoreCase("IE")) {
+                System.setProperty("webdriver.ie.driver","./IEDriverServer.exe");
+                DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
+                caps.setCapability("ignoreProtectedModeSettings", true);
+                caps.setCapability("ie.ensureCleanSession", true);
+                caps.setCapability("enableElementCacheCleanup", true);
+                caps.setCapability("ignoreZoomSetting", true);
+                caps.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
+                wd = new InternetExplorerDriver(caps);
+                wd.manage().deleteAllCookies();
+            } else if (browser.equalsIgnoreCase("EDGE")) {
+                System.setProperty("webdriver.edge.driver","./msedgedriver.exe");
+                EdgeOptions edgeOptions = new EdgeOptions();
+                wd = new EdgeDriver(edgeOptions);
+            } else if (browser.equalsIgnoreCase("CHROME")) {
+//                System.setProperty("webdriver.Chrome", "/snap/bin/chromium.chromedriver");
+                System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+//                System.setProperty("webdriver.Chrome", "./chromedriver.exe");
+//                Map<String, Object> chromePrefs = new HashMap<String, Object>();
+//                chromePrefs.put("profile.default_content_settings.popups", 0);
+//                chromePrefs.put("profile.default_content_setting_values.notifications", 2);
+////                chromePrefs.put("download.default_directory", file);
+//                chromePrefs.put("profile.default_content_setting_values.automatic_downloads", 1);
+//                chromePrefs.put("download.prompt_for_download", false);
+//                chromePrefs.put("--ignore-ssl-errors",true);
+//                chromePrefs.put("--ignore-certificate-errors",true);
+//                chromePrefs.put("--allow-insecure-localhost",true);
+                ChromeOptions options = new ChromeOptions();
+//                options.setBinary("/usr/bin/google-chrome");
+//                options.setExperimentalOption("prefs", chromePrefs);
+//                DesiredCapabilities cap = DesiredCapabilities.chrome();
+//                cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+//                cap.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS,true);
+//                cap.setCapability(ChromeOptions.CAPABILITY, options);
+
+                options.addArguments("--headless");
+                options.addArguments("--disable-dev-shm-usage");
+                options.addArguments("--allow-insecure-localhost");
+                options.addArguments("--window-size=1920,1080");
+                options.addArguments("start-maximized");
+                options.addArguments("enable-automation");
+                options.addArguments("--disable-infobars");
+                options.addArguments("--disable-browser-side-navigation");
+                options.addArguments("--disable-gpu");
+                options.addArguments("--no-sandbox");
+                options.addArguments("--force-device-scale-factor=1");
+
+                wd = new ChromeDriver(options);
+                wd.manage().deleteAllCookies();
+            } else if (browser.equalsIgnoreCase("FIREFOX")) {
+                System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+                wd = new FirefoxDriver(firefoxOptions);
+            }
+
+        } else {
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setBrowserName(browser);
+            try {
+                wd = new RemoteWebDriver(new URL(reader.get("")), capabilities);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+        }
+        wd.manage().window().maximize();
+        wd.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+        return wd;
+        }else{
+            return wd;
+        }
+    }
 
     public static void stop() {
         if (wd != null) {
@@ -138,71 +138,71 @@ public class AppManager {
 
 
 
-    public static WebDriver getWebDriver() {
-        if (wd == null) {
-            if ("".equals(reader.get("selenium.server"))) {
-                if (browser.equalsIgnoreCase("IE")) {
-                    System.setProperty("webdriver.ie.driver","./IEDriverServer.exe");
-                    DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
-                    caps.setCapability("ignoreProtectedModeSettings", true);
-                    caps.setCapability("ie.ensureCleanSession", true);
-                    caps.setCapability("enableElementCacheCleanup", true);
-                    caps.setCapability("ignoreZoomSetting", true);
-                    caps.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
-                    wd = new InternetExplorerDriver(caps);
-                    wd.manage().deleteAllCookies();
-                } else if (browser.equalsIgnoreCase("EDGE")) {
-                    System.setProperty("webdriver.edge.driver","./msedgedriver.exe");
-                    EdgeOptions edgeOptions = new EdgeOptions();
-                    wd = new EdgeDriver(edgeOptions);
-                } else if (browser.equalsIgnoreCase("CHROME")) {
-//                System.setProperty("webdriver.Chrome", "/snap/bin/chromium.chromedriver");
-//                    System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-                System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-                Map<String, Object> chromePrefs = new HashMap<String, Object>();
-                chromePrefs.put("profile.default_content_settings.popups", 0);
-                chromePrefs.put("profile.default_content_setting_values.notifications", 2);
-//                chromePrefs.put("download.default_directory", file);
-                chromePrefs.put("profile.default_content_setting_values.automatic_downloads", 1);
-                chromePrefs.put("download.prompt_for_download", false);
-                chromePrefs.put("--ignore-ssl-errors",true);
-                chromePrefs.put("--ignore-certificate-errors",true);
-                chromePrefs.put("--allow-insecure-localhost",true);
-                ChromeOptions options = new ChromeOptions();
-//                options.setBinary("/usr/bin/google-chrome");
-                options.setExperimentalOption("prefs", chromePrefs);
-                DesiredCapabilities cap = DesiredCapabilities.chrome();
-                cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-                cap.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS,true);
-                cap.setCapability(ChromeOptions.CAPABILITY, options);
-
-                    wd = new ChromeDriver(options);
-                    wd.manage().deleteAllCookies();
-                } else if (browser.equalsIgnoreCase("FIREFOX")) {
-                    System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
-                    FirefoxOptions firefoxOptions = new FirefoxOptions();
-                    wd = new FirefoxDriver(firefoxOptions);
-                }
-
-            } else {
-                DesiredCapabilities capabilities = new DesiredCapabilities();
-                capabilities.setBrowserName(browser);
-                try {
-                    wd = new RemoteWebDriver(new URL(reader.get("")), capabilities);
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                }
-            }
-            wd.manage().window().maximize();
-            wd.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
-            return wd;
-        }else{
-            return wd;
-        }
-    }
-
-
+//    public static WebDriver getWebDriver() {
+//        if (wd == null) {
+//            if ("".equals(reader.get("selenium.server"))) {
+//                if (browser.equalsIgnoreCase("IE")) {
+//                    System.setProperty("webdriver.ie.driver","./IEDriverServer.exe");
+//                    DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
+//                    caps.setCapability("ignoreProtectedModeSettings", true);
+//                    caps.setCapability("ie.ensureCleanSession", true);
+//                    caps.setCapability("enableElementCacheCleanup", true);
+//                    caps.setCapability("ignoreZoomSetting", true);
+//                    caps.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
+//                    wd = new InternetExplorerDriver(caps);
+//                    wd.manage().deleteAllCookies();
+//                } else if (browser.equalsIgnoreCase("EDGE")) {
+//                    System.setProperty("webdriver.edge.driver","./msedgedriver.exe");
+//                    EdgeOptions edgeOptions = new EdgeOptions();
+//                    wd = new EdgeDriver(edgeOptions);
+//                } else if (browser.equalsIgnoreCase("CHROME")) {
+////                System.setProperty("webdriver.Chrome", "/snap/bin/chromium.chromedriver");
+////                    System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+//                System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+//                Map<String, Object> chromePrefs = new HashMap<String, Object>();
+//                chromePrefs.put("profile.default_content_settings.popups", 0);
+//                chromePrefs.put("profile.default_content_setting_values.notifications", 2);
+////                chromePrefs.put("download.default_directory", file);
+//                chromePrefs.put("profile.default_content_setting_values.automatic_downloads", 1);
+//                chromePrefs.put("download.prompt_for_download", false);
+//                chromePrefs.put("--ignore-ssl-errors",true);
+//                chromePrefs.put("--ignore-certificate-errors",true);
+//                chromePrefs.put("--allow-insecure-localhost",true);
+//                ChromeOptions options = new ChromeOptions();
+////                options.setBinary("/usr/bin/google-chrome");
+//                options.setExperimentalOption("prefs", chromePrefs);
+//                DesiredCapabilities cap = DesiredCapabilities.chrome();
+//                cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+//                cap.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS,true);
+//                cap.setCapability(ChromeOptions.CAPABILITY, options);
+//
+//                    wd = new ChromeDriver(options);
+//                    wd.manage().deleteAllCookies();
+//                } else if (browser.equalsIgnoreCase("FIREFOX")) {
+//                    System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
+//                    FirefoxOptions firefoxOptions = new FirefoxOptions();
+//                    wd = new FirefoxDriver(firefoxOptions);
+//                }
+//
+//            } else {
+//                DesiredCapabilities capabilities = new DesiredCapabilities();
+//                capabilities.setBrowserName(browser);
+//                try {
+//                    wd = new RemoteWebDriver(new URL(reader.get("")), capabilities);
+//                } catch (MalformedURLException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//            wd.manage().window().maximize();
+//            wd.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//
+//            return wd;
+//        }else{
+//            return wd;
+//        }
+//    }
+//
+//
 
 
 

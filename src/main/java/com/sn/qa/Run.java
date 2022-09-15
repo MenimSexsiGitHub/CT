@@ -33,52 +33,52 @@ import java.util.ArrayList;
 )
 
 
-public class Run{ }
+//public class Run{ }
 
-//public class Run extends AbstractTestNGCucumberTests {
-//    String sourceDir = "./src/main/resources/";
-//
-//    private static CucumberFormatter formatter;
-//    private PropertyFileReader localReader = new PropertyFileReader("config.properties","config/");
-//    static ArrayList<String> listOfScenarios = new ArrayList<>();
-//    static ArrayList<String> results = new ArrayList<>();
-////    private static final Regex myRegex = new Regex("[^\\\\p{Alpha}\\\\p{Digit}]+");
-//
-//
-//    @BeforeSuite
-//    public void setUp() {
-//        formatter = new CucumberFormatter();
-//        CucumberFormatter.initiateExtentCucumberFormatter();
-//        CucumberFormatter.loadConfig(new File(sourceDir + "extent-config.xml"));
-//
-//    }
-//
-//    @AfterSuite(alwaysRun = true)
-//    public void tearDown() {
-//        AppManager.stop();
-//    }
-//
-//
-//    @Before
-//    public void startScenario(Scenario scenario) {
-//
-//        String fileName = scenario.getName().split(" ")[0];
-//        String[] tagsToBeRun = localReader.get("tagsForVideoCapture").replaceAll("\\s+", "").split(",");
-//        for (String tag : scenario.getSourceTagNames()) {
-//            for (String tagToBeRun : tagsToBeRun) {
-//                if (tag.equalsIgnoreCase(tagToBeRun)) {
-//                    System.out.println("================================= " + tag + " ==========================================");
-//                } else {
-//                }
-//            }
-//        }
-//
-//    }
-//
-//    @After
-//    public void endScenario(Scenario scenario) {
-//        AppManager.stop();
-//        listOfScenarios.add(scenario.getStatus().toUpperCase() + " - " + scenario.getName());
-//    }
-//
-//}
+public class Run extends AbstractTestNGCucumberTests {
+    String sourceDir = "./src/main/resources/";
+
+    private static CucumberFormatter formatter;
+    private PropertyFileReader localReader = new PropertyFileReader("config.properties","config/");
+    static ArrayList<String> listOfScenarios = new ArrayList<>();
+    static ArrayList<String> results = new ArrayList<>();
+//    private static final Regex myRegex = new Regex("[^\\\\p{Alpha}\\\\p{Digit}]+");
+
+
+    @BeforeSuite
+    public void setUp() {
+        formatter = new CucumberFormatter();
+        CucumberFormatter.initiateExtentCucumberFormatter();
+        CucumberFormatter.loadConfig(new File(sourceDir + "extent-config.xml"));
+
+    }
+
+    @AfterSuite(alwaysRun = true)
+    public void tearDown() {
+        AppManager.stop();
+    }
+
+
+    @Before
+    public void startScenario(Scenario scenario) {
+
+        String fileName = scenario.getName().split(" ")[0];
+        String[] tagsToBeRun = localReader.get("tagsForVideoCapture").replaceAll("\\s+", "").split(",");
+        for (String tag : scenario.getSourceTagNames()) {
+            for (String tagToBeRun : tagsToBeRun) {
+                if (tag.equalsIgnoreCase(tagToBeRun)) {
+                    System.out.println("================================= " + tag + " ==========================================");
+                } else {
+                }
+            }
+        }
+
+    }
+
+    @After
+    public void endScenario(Scenario scenario) {
+        AppManager.stop();
+        listOfScenarios.add(scenario.getStatus().toUpperCase() + " - " + scenario.getName());
+    }
+
+}
