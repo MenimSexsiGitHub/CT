@@ -67,15 +67,16 @@ public class AppManager {
 //                chromePrefs.put("--ignore-certificate-errors",true);
 //                chromePrefs.put("--allow-insecure-localhost",true);
 //
-//                ChromeOptions options = new ChromeOptions();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--headless");
+                options.addArguments("--no-sandbox");
 //                options.setExperimentalOption("prefs", chromePrefs);
 //                DesiredCapabilities cap = DesiredCapabilities.chrome();
 //                cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 //                       cap.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS,true);
 //                cap.setCapability(ChromeOptions.CAPABILITY, options);
-//                wd = new ChromeDriver(options);
-                wd = new ChromeDriver();
-//                wd.manage().deleteAllCookies();
+                wd = new ChromeDriver(options);
+                wd.manage().deleteAllCookies();
             } else if (browser.equalsIgnoreCase("FIREFOX")) {
                 System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
