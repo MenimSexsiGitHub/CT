@@ -58,8 +58,8 @@ public class AppManager {
             } else if (browser.equalsIgnoreCase("CHROME")) {
                 System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
                 ChromeOptions options = new ChromeOptions();
-//                options.setBinary("/usr/bin/google-chrome");
-                options.setBinary("/opt/google/chrome/google-chrome");
+                options.setBinary("/usr/bin/google-chrome");
+//                options.setBinary("/opt/google/chrome/google-chrome");
 //                options.addArguments("--headless");
 //                options.addArguments("--disable-dev-shm-usage");
 //                options.addArguments("--remote-debugging-port=9222");
