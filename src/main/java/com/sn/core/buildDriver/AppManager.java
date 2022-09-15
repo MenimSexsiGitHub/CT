@@ -77,8 +77,16 @@ public class AppManager {
 //                cap.setCapability(ChromeOptions.CAPABILITY, options);
 
                 options.addArguments("--headless");
-                options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
+                options.addArguments("--allow-insecure-localhost");
+                options.addArguments("--window-size=1920,1080");
+                options.addArguments("start-maximized");
+                options.addArguments("enable-automation");
+                options.addArguments("--disable-infobars");
+                options.addArguments("--disable-browser-side-navigation");
+                options.addArguments("--disable-gpu");
+                options.addArguments("--no-sandbox");
+                options.addArguments("--force-device-scale-factor=1");
 
                 wd = new ChromeDriver(options);
                 wd.manage().deleteAllCookies();
