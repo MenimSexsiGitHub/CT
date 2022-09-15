@@ -512,6 +512,10 @@
 <!--                    <argLine>-Xmx256m</argLine>-->
 <!--                    &lt;!&ndash;                                <forkCount>${forkCount}</forkCount>&ndash;&gt;-->
 <!--                    <reuseForks>false</reuseForks>-->
+                    <testSourceDirectory>${basedir}/src/main/com/sn</testSourceDirectory>
+                    <testClassesDirectory>${project.build.directory}/classes/</testClassesDirectory>
+                    <argLine>-Xmx256m</argLine>
+                    <reuseForks>false</reuseForks>
                     <includes>
                         <include>**/*Test.java</include>
                     </includes>
