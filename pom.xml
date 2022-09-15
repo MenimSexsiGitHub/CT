@@ -475,7 +475,7 @@
                         </goals>
                         <configuration>
                             <sources>
-                                <source>code</source>
+                                <source>src</source>
                             </sources>
                         </configuration>
                     </execution>
