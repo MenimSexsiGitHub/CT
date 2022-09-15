@@ -566,8 +566,8 @@
                                 <goal>test</goal>
                             </goals>
                             <configuration>
-                                <testSourceDirectory>${basedir}/src/main/resources</testSourceDirectory>
-                                <testClassesDirectory>${project.build.directory}/classes/</testClassesDirectory>
+                                <testSourceDirectory>/src/main/resources</testSourceDirectory>
+                                <testClassesDirectory>/src/main/java</testClassesDirectory>
                                 <argLine>-Xmx256m</argLine>
 <!--                                <forkCount>${forkCount}</forkCount>-->
                                 <reuseForks>false</reuseForks>
