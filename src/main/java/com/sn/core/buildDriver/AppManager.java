@@ -2,6 +2,7 @@ package com.sn.core.buildDriver;
 
 
 import com.sn.qa.util.PropertyFileReader;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -55,8 +56,14 @@ public class AppManager {
                 System.setProperty("webdriver.edge.driver","./msedgedriver.exe");
                 EdgeOptions edgeOptions = new EdgeOptions();
                 wd = new EdgeDriver(edgeOptions);
+            } else if (browser.equalsIgnoreCase("Chromium")) {
+                System.setProperty("webdriver.edge.driver","./msedgedriver.exe");
+                WebDriverManager.chromiumdriver().setup();
+                ChromeOptions options = new ChromeOptions().setBinary("/snap/bin/chromium");
+                wd = new ChromeDriver(options);
             } else if (browser.equalsIgnoreCase("CHROME")) {
-                System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+//                System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+                WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 options.setBinary("/usr/bin/google-chrome");
 //                options.setBinary("/opt/google/chrome/google-chrome");
