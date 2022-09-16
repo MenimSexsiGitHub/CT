@@ -59,7 +59,7 @@ public class AppManager {
             } else if (browser.equalsIgnoreCase("Chromium")) {
                 System.setProperty("webdriver.edge.driver","./msedgedriver.exe");
                 WebDriverManager.chromiumdriver().setup();
-                ChromeOptions options = new ChromeOptions().setBinary("/snap/bin/chromium");
+                ChromeOptions options = new ChromeOptions().setBinary("/user/bin/chromium-browser");
                 wd = new ChromeDriver(options);
             } else if (browser.equalsIgnoreCase("CHROME")) {
 //                System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
