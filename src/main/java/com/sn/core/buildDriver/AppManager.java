@@ -67,7 +67,7 @@ public class AppManager {
                 ChromeOptions options = new ChromeOptions();
                 options.setBinary("/usr/bin/google-chrome");
 //                options.setBinary("/opt/google/chrome/google-chrome");
-                options.addArguments("--headless");
+//                options.addArguments("--headless");
                 options.addArguments("--disable-dev-shm-usage");
                 options.addArguments("--remote-debugging-port=9222");
                 options.addArguments("--allow-insecure-localhost");
@@ -80,6 +80,7 @@ public class AppManager {
 //                options.addArguments("--disable-gpu");
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-setuid-sandbox");
+                options.addArguments("--disable-features=VizDisplayCompositor");
 //                options.addArguments("--force-device-scale-factor=1");
 
                 wd = new ChromeDriver(options);
