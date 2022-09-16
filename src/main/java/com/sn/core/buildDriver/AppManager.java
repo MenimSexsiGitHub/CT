@@ -65,15 +65,15 @@ public class AppManager {
                 options.addArguments("--remote-debugging-port=9222");
                 options.addArguments("--allow-insecure-localhost");
 //                options.addArguments("--window-size=1920,1080");
-                options.addArguments("window-size=1280x800");
+                options.addArguments("window-size=1024x768");
 //                options.addArguments("start-maximized");
                 options.addArguments("enable-automation");
                 options.addArguments("--disable-infobars");
                 options.addArguments("--disable-browser-side-navigation");
-                options.addArguments("--disable-gpu");
+//                options.addArguments("--disable-gpu");
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-setuid-sandbox");
-                options.addArguments("--force-device-scale-factor=1");
+//                options.addArguments("--force-device-scale-factor=1");
 
                 wd = new ChromeDriver(options);
                 wd.manage().deleteAllCookies();
