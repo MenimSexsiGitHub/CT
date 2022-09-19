@@ -16,7 +16,7 @@ public class HomePage extends BasePage {
 
     //header bar elements
 
-    @FindBy(xpath = "//*[@class='title']/h2/strong")
+    @FindBy(xpath = "(//span[contains(text(),'CI/CD Demo Prototype')])[1]")
     private WebElement labelPageTitle;
     @FindBy(xpath = "(//span[contains(text(),'CI/CD Demo Prototype')])[1]")
     private WebElement labelCiCdDemo;
@@ -38,6 +38,7 @@ public class HomePage extends BasePage {
     public void validateAppLogoExistence(){
         if(logoAmpcus.isDisplayed()) {
             System.out.println("app logo is visible");
+            takeScreenshot();
         }else {
             org.junit.Assert.assertFalse("Logo isn't displayed", true);
         }
