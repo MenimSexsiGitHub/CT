@@ -38,7 +38,6 @@ public class HomePage extends BasePage {
     public void validateAppLogoExistence(){
         if(logoAmpcus.isDisplayed()) {
             System.out.println("app logo is visible");
-            captureScreenShot();
         }else {
             org.junit.Assert.assertFalse("Logo isn't displayed", true);
         }
