@@ -75,6 +75,10 @@ public class BasePage extends DriverBase {
         CucumberFormatter.takeScreenshot();
     }
 
+    public void captureScreenShot(){
+        CucumberFormatter.captureScreenShot("target/Screenshots");
+    }
+
 
     public void mouseHOverOnElement(WebElement element){
         actions.moveToElement(element).build().perform();
