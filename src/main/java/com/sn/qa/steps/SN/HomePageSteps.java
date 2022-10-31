@@ -50,6 +50,15 @@ public class HomePageSteps extends BaseSteps {
         homePage.verifyDescriptionContent();
     }
 
+    @Then("^user clicks Ampcus Link from Ampcus Logo$")
+    public void user_clicks_Ampcus_Link_from_Ampcus_Logo() throws Throwable {
+        homePage.clickAmpcusLinkFromLogo();
+    }
+
+    @Then("^user verified navigation to Ampcus website happened$")
+    public void user_verified_navigation_to_Ampcus_website_happened() throws Throwable {
+        homePage.verifyLandedOnAmpcusHome();
+    }
 
 
 

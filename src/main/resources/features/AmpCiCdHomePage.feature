@@ -8,4 +8,6 @@ Feature: AmpCi/Cd Home Page
     Then verify application logo
     Then user verifies that the home page title is displayed
     And user verifies that the expected texts of the page are displayed
+    Then user clicks Ampcus Link from Ampcus Logo
+    And user verified navigation to Ampcus website happened
 

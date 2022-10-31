@@ -14,6 +14,13 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//img[@src='resources/images/headerlogo.jpg']")
     private WebElement logoAmpcus;
 
+    @FindBy(xpath = "//*[@href=\"https://www.ampcus.com/\"]")
+    private WebElement linkAmpcusInLogo;
+
+    @FindBy(xpath = "//*[@title='Ampcus']")
+    private WebElement logoAmpcusInAmpcusHome;
+
+
     //header bar elements
 
     @FindBy(xpath = "(//span[contains(text(),'CI/CD Demo Prototype')])[1]")
@@ -64,6 +71,17 @@ public class HomePage extends BasePage {
         if(labelDescription.isDisplayed()){
         }else {
             Assert.assertFalse(true, "Page title isn't displayed");
+        }
+    }
+
+    public void clickAmpcusLinkFromLogo(){
+        linkAmpcusInLogo.click();
+    }
+
+    public void verifyLandedOnAmpcusHome(){
+        if (logoAmpcusInAmpcusHome.isDisplayed()){
+        }else {
+            Assert.assertFalse(true, "Not landed on Ampcus home");
         }
     }
 
