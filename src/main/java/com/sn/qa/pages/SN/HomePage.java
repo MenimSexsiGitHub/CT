@@ -80,7 +80,9 @@ public class HomePage extends BasePage {
 
     public void verifyLandedOnAmpcusHome(){
         if (logoAmpcusInAmpcusHome.isDisplayed()){
+            takeScreenshot();
         }else {
+            takeScreenshot();
             Assert.assertFalse(true, "Not landed on Ampcus home");
         }
     }
