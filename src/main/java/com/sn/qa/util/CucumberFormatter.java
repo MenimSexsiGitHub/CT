@@ -214,7 +214,7 @@ public class CucumberFormatter implements Reporter, Formatter {
         String result = scenarioTest.getTest().getStatus().toString();
         if (screenShotSwitch == false || result.contains("fail")) {
             File scrFile = null;
-            String scrPath = outputDirectory + "\\Screenshots";
+            String scrPath = createOutputDirectory() + "\\Screenshots";
             File file = new File(scrPath);
             file.mkdir();
             try {
