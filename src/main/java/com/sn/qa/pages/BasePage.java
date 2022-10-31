@@ -76,7 +76,7 @@ public class BasePage extends DriverBase {
     }
 
     public void captureScreenShot(){
-        CucumberFormatter.captureScreenShot("target/Screenshots");
+        CucumberFormatter.captureScreenShot("Screenshots");
     }
 
 
