@@ -76,13 +76,14 @@ public class HomePage extends BasePage {
 
     public void clickAmpcusLinkFromLogo(){
         linkAmpcusInLogo.click();
+        waitForPageLoad(5);
     }
 
     public void verifyLandedOnAmpcusHome(){
         if (logoAmpcusInAmpcusHome.isDisplayed()){
-            takeScreenshot();
+            captureScreenShot();
         }else {
-            takeScreenshot();
+            captureScreenShot();
             Assert.assertFalse(true, "Not landed on Ampcus home");
         }
     }
