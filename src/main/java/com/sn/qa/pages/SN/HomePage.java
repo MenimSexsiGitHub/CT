@@ -75,8 +75,11 @@ public class HomePage extends BasePage {
     }
 
     public void clickAmpcusLinkFromLogo(){
-        linkAmpcusInLogo.click();
-        waitForPageLoad(5);
+        if(linkAmpcusInLogo.isDisplayed()){
+            linkAmpcusInLogo.click();
+        }else {
+            Assert.assertFalse(true, "Page title isn't displayed");
+        }
     }
 
     public void verifyLandedOnAmpcusHome(){
