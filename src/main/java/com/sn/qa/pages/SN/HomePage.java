@@ -14,7 +14,7 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//img[@src='resources/images/headerlogo.jpg']")
     private WebElement logoAmpcus;
 
-    @FindBy(xpath = "//*[@href=\"https://www.ampcus.com/\"]")
+    @FindBy(xpath = "//*[contains(@href,\"https://www.ampcus.com/\")]")
     private WebElement linkAmpcusInLogo;
 
     @FindBy(xpath = "//*[@title='Ampcus']")
